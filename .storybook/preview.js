@@ -1,3 +1,5 @@
+import {inter} from "@/lib/fonts";
+
 /** @type { import('@storybook/react').Preview } */
 const preview = {
   parameters: {
@@ -9,6 +11,15 @@ const preview = {
       },
     },
   },
+  decorators: [
+    (Story) => {
+      return (
+        <div className={`!p-0 !m-0 ${inter.className}`}>
+          <Story/>
+        </div>
+      )
+    }
+  ]
 };
 
 export default preview;

@@ -1,8 +1,6 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Logo from "@/components/Logo";
-
-const inter = Inter({ subsets: ["latin"] });
+import {inter} from "@/lib/fonts";
 
 export const metadata = {
   title: "CashRegister[JS]",
