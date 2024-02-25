@@ -13,11 +13,11 @@ export default function RootLayout({children}) {
     <html className="p-0" lang="en">
     <body className={`${inter.className} w-full p-8 flex flex-wrap`}>
     <div className="w-full">
-      <div className="w-[200px] mb-4">
+      <div className="w-[160px] md:w-[200px] mb-4">
         <Logo/>
       </div>
     </div>
-    <div className="w-full">
+    <div className="w-full md:w-2/3 mx-auto">
       {children}
     </div>
     </body>
