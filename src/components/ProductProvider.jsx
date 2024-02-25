@@ -1,10 +1,14 @@
 "use client";
 
-import {createContext, useEffect, useState} from "react";
+import {createContext, useContext, useEffect, useState} from "react";
 
-export const ProductDataContext = createContext({});
+const ProductDataContext = createContext({});
 
-const ProductContext = ({children}) => {
+export const useProducts = () => {
+  return useContext(ProductDataContext);
+}
+
+const ProductProvider = ({children}) => {
 
   const [products, setProducts] = useState(null);
 
@@ -21,7 +25,6 @@ const ProductContext = ({children}) => {
 
     const getProductsEffect = async () => {
       const productData = await getProductContextInitialValue();
-      console.log("Called");
       setProducts(productData);
     }
 
@@ -36,4 +39,4 @@ const ProductContext = ({children}) => {
   )
 }
 
-export default ProductContext;
+export default ProductProvider;

@@ -2,12 +2,24 @@
 
 import ProductButton from "@/components/ProductButton";
 import Currency from "@/lib/currency";
-import {useContext} from "react";
-import {ProductDataContext} from "@/components/ProductContext";
+import {useProducts} from "@/components/ProductProvider";
+import {ItemReducerActionTypes, useBasketDispatch} from "@/components/BasketProvider";
 
-const ProductButtonList = ({onClick}) => {
+const ProductButtonList = () => {
 
-  const productData = useContext(ProductDataContext);
+  const productData = useProducts();
+  const basketDispatch = useBasketDispatch();
+
+  const onProductAdd = (evt) => {
+    evt.preventDefault();
+    const productId = evt?.target?.dataset?.productId;
+    console.log("ProductId", productId);
+    if (!productId || !basketDispatch) return;
+    basketDispatch({
+      type: ItemReducerActionTypes.ITEM_INCREASE,
+      itemId: productId
+    });
+  }
 
   return (
     <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-2">
@@ -17,7 +29,7 @@ const ProductButtonList = ({onClick}) => {
             <ProductButton productId={product.code}
                            name={product.name}
                            formattedPrice={Currency.formatCents(product.price)}
-                           onClick={onClick}/>
+                           onClick={onProductAdd}/>
           </div>
         )
       })}

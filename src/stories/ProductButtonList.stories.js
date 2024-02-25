@@ -1,6 +1,6 @@
 import ProductButtonList from "@/components/ProductButtonList";
 import {withReactContext} from "storybook-react-context";
-import {ProductDataContext} from "@/components/ProductContext";
+import {ProductDataContext} from "@/components/ProductProvider";
 
 export default {
   component: ProductButtonList, decorators: [
@@ -34,11 +34,6 @@ export default {
 
 export const Render = {
   render: () => {
-    const onClickMock = (evt) => {
-      evt.preventDefault();
-      alert(`Button clicked! Product ID: ${evt.target.dataset.productId}`);
-    }
-
-    return (<ProductButtonList onClick={onClickMock}/>)
+    return (<ProductButtonList/>)
   },
 };
