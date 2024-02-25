@@ -1,14 +1,17 @@
+"use client";
+
 import ProductButton from "@/components/ProductButton";
-import DB from "@/lib/db";
 import Currency from "@/lib/currency";
+import {useContext} from "react";
+import {ProductDataContext} from "@/components/ProductContext";
 
 const ProductButtonList = ({onClick}) => {
 
-  const products = DB.getAllProducts();
+  const productData = useContext(ProductDataContext);
 
   return (
-    <div className="w-full grid grid-cols-3 gap-2">
-      {products.map((product) => {
+    <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-2">
+      {productData && productData.map((product) => {
         return (
           <div key={`product-${product.code}`}>
             <ProductButton productId={product.code}
