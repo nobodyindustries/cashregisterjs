@@ -4,8 +4,8 @@ import {createContext, useContext, useReducer} from "react";
 
 const basketInitialState = {items: {}};
 
-const BasketDataContext = createContext(null);
-const BasketDispatchContext = createContext(null);
+export const BasketDataContext = createContext(null);
+export const BasketDispatchContext = createContext(null);
 
 export const useBasket = () => {
   return useContext(BasketDataContext);

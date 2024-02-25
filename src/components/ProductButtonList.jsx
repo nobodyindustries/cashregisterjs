@@ -13,7 +13,6 @@ const ProductButtonList = () => {
   const onProductAdd = (evt) => {
     evt.preventDefault();
     const productId = evt?.target?.dataset?.productId;
-    console.log("ProductId", productId);
     if (!productId || !basketDispatch) return;
     basketDispatch({
       type: ItemReducerActionTypes.ITEM_INCREASE,
