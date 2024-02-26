@@ -4,6 +4,7 @@ import {createContext, useContext, useReducer} from "react";
 
 const basketInitialState = {items: {}};
 
+// Only left visible for it to be mocked in the stories
 export const BasketDataContext = createContext(null);
 export const BasketDispatchContext = createContext(null);
 

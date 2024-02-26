@@ -2,6 +2,7 @@
 
 import {createContext, useContext, useEffect, useState} from "react";
 
+// Only left visible for it to be mocked in the stories
 export const ProductDataContext = createContext({});
 
 export const useProducts = () => {
