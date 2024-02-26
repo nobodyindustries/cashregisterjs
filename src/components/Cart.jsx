@@ -11,7 +11,6 @@ const Cart = () => {
 
   return (
     <div className="mb-4 p-4 border-2 border-black flex flex-wrap">
-      {JSON.stringify(products)}
       {basket && basket?.items && Object.keys(basket.items).length > 0 ? (
         Object.entries(basket.items).map(([itemId, quantity]) =>
           <CartItem key={`cart-item-${itemId}`} productId={itemId}

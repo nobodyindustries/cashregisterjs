@@ -5,6 +5,7 @@ import ProductProvider from "@/components/ProductProvider";
 import Cart from "@/components/Cart";
 import BasketProvider from "@/components/BasketProvider";
 import RuleProvider from "@/components/RuleProvider";
+import DiscountList from "@/components/DiscountList";
 
 export default function Home() {
 
@@ -15,10 +16,12 @@ export default function Home() {
           <main>
             <h1>Cart</h1>
             <Cart/>
+            <h1>Discounts</h1>
+            <DiscountList/>
             <h1>Add products</h1>
             <ProductButtonList/>
           </main>
-        </RuleProvider>s
+        </RuleProvider>
       </BasketProvider>
     </ProductProvider>
   );

@@ -22,12 +22,3 @@ const BuyTwoGetOneFreeGreenTea = {
 }
 
 export default BuyTwoGetOneFreeGreenTea;
-
-// {"items":{"GR1":50,"SR1":22,"CF1":5}}
-/*
-[
-  {"code":"GR1","name":"Green Tea","price":311},
-  {"code":"SR1","name":"Strawberries","price":500},
-  {"code":"CF1","name":"Coffee","price":1123}
-]
- */

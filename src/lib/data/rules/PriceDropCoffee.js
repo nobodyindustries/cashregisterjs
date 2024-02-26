@@ -12,9 +12,11 @@ const PriceDropCoffee = {
   },
   getAmountInCents: (basket, products) => {
     if (!PriceDropCoffee.applies(basket)) return 0;
-    const coffeeProducts = Object.entries(products).filter((item) => item[0].startsWith("CF"));
-    return -coffeeProducts.map((item) => {
-      const product = products?.[item[0]];
+    const items = basket?.items;
+    if (!items) return 0;
+    const coffeeItems = Object.entries(items).filter((item) => item[0].startsWith("CF"));
+    return -coffeeItems.map((item) => {
+      const product = products.find((product) => product.code === item[0]);
       if (!product) return 0;
       if (product?.price === undefined) throw new Error(`Misconfigured product: ${item[0]}`)
       return product.price / 3 * PriceDropCoffee.amountCount(basket);
@@ -23,12 +25,3 @@ const PriceDropCoffee = {
 }
 
 export default PriceDropCoffee;
-
-// {"items":{"GR1":50,"SR1":22,"CF1":5}}
-/*
-[
-  {"code":"GR1","name":"Green Tea","price":311},
-  {"code":"SR1","name":"Strawberries","price":500},
-  {"code":"CF1","name":"Coffee","price":1123}
-]
- */
