@@ -15,7 +15,7 @@ const Cart = () => {
         Object.entries(basket.items).map(([itemId, quantity]) =>
           <CartItem key={`cart-item-${itemId}`} productId={itemId}
                     productName={ProductUtils.getNameFromId(products, itemId)}
-                    productQuantity={quantity}/>
+                    productQuantity={quantity} productPrice={ProductUtils.getPriceFromId(products, itemId)}/>
         )
       ) : (
         <div className="w-full text-xl">

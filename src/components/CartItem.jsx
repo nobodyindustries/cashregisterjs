@@ -1,6 +1,7 @@
 import {ItemReducerActionTypes, useBasketDispatch} from "@/components/BasketProvider";
+import currency from "@/lib/currency";
 
-const CartItem = ({productId, productName, productQuantity}) => {
+const CartItem = ({productId, productName, productQuantity, productPrice}) => {
 
   const basketDispatch = useBasketDispatch();
 
@@ -21,6 +22,9 @@ const CartItem = ({productId, productName, productQuantity}) => {
       <div className="flex-grow overflow-hidden">
         <span className="font-bold">{productName}</span>
         <span className="pl-2">x{productQuantity}</span>
+      </div>
+      <div className="flex-none pr-4">
+        {currency.formatCents(productQuantity * productPrice)}
       </div>
       <div className="flex-none stroke-black fill-black w-8 h-8 cursor-pointer" data-product-id={productId}
            onClick={onIncreaseProduct}>
