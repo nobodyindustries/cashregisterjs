@@ -1,5 +1,5 @@
-import products from "@/lib/data/products";
-import rules from "@/lib/data/rules";
+import products from "@/data/products";
+import rules from "@/data/rules";
 
 
 const DB = {
