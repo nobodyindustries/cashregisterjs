@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {useBasket} from "@/components/BasketProvider";
 import CartItem from "@/components/CartItem";
@@ -26,7 +26,7 @@ const Cart = () => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
 export default Cart;

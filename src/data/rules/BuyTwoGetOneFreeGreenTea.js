@@ -10,7 +10,7 @@ const BuyTwoGetOneFreeGreenTea = {
     return items["GR1"];
   },
   applies: (basket) => {
-    return BuyTwoGetOneFreeGreenTea.amountCount(basket) >= 2
+    return BuyTwoGetOneFreeGreenTea.amountCount(basket) >= 2;
   },
   getAmountInCents: (basket, products) => {
     if (!BuyTwoGetOneFreeGreenTea.applies(basket)) return 0;
@@ -20,6 +20,6 @@ const BuyTwoGetOneFreeGreenTea = {
     const freeUnits = Math.floor(unitsInBasket / 2);
     return -(freeUnits * price);
   }
-}
+};
 
 export default BuyTwoGetOneFreeGreenTea;

@@ -6,7 +6,7 @@ import {BasketDataContext, BasketDispatchContext} from "@/components/BasketProvi
 
 export default {
   component: Cart
-}
+};
 
 export const Empty = {
   render: () => <Cart/>,

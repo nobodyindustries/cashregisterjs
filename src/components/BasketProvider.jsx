@@ -10,11 +10,11 @@ export const BasketDispatchContext = createContext(null);
 
 export const useBasket = () => {
   return useContext(BasketDataContext);
-}
+};
 
 export const useBasketDispatch = () => {
   return useContext(BasketDispatchContext);
-}
+};
 
 export const ItemReducerActionTypes = Object.freeze({
   ITEM_INCREASE: 'item-increase',
@@ -36,7 +36,7 @@ export const itemsReducer = (state, action) => {
             ...state.items,
             [currentItemId]: 1
           }
-        }
+        };
       }
     case ItemReducerActionTypes.ITEM_DECREASE:
       const new_items = Object.assign({}, state.items);
@@ -50,7 +50,7 @@ export const itemsReducer = (state, action) => {
     default:
       throw new Error(`Invalid action in BasketContext: ${action.type}`);
   }
-}
+};
 
 const BasketProvider = ({children}) => {
 
@@ -62,7 +62,7 @@ const BasketProvider = ({children}) => {
         {children}
       </BasketDispatchContext.Provider>
     </BasketDataContext.Provider>
-  )
-}
+  );
+};
 
 export default BasketProvider;

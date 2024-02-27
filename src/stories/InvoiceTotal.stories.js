@@ -7,7 +7,7 @@ import {RuleDataContext} from "@/components/RuleProvider";
 
 export default {
   component: InvoiceTotal
-}
+};
 
 export const Primary = {
   render: () => <InvoiceTotal/>,

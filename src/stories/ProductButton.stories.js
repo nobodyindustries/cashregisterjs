@@ -13,20 +13,20 @@ export default {
       control: "text",
     }
   }
-}
+};
 
 export const Primary = {
   render: ({productId, name, formattedPrice}) => {
     const onClickMock = (evt) => {
       evt.preventDefault();
       alert(`Button clicked! Product ID: ${evt.target.dataset.productId}`);
-    }
+    };
 
-    return (<ProductButton productId={productId} name={name} formattedPrice={formattedPrice} onClick={onClickMock}/>)
+    return (<ProductButton productId={productId} name={name} formattedPrice={formattedPrice} onClick={onClickMock}/>);
   },
   args: {
     productId: "CF1",
     name: "Coffee",
     formattedPrice: "4.20€"
   }
-}
+};

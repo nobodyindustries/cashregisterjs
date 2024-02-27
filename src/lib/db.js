@@ -9,6 +9,6 @@ const DB = {
   getAllRules: () => {
     return rules;
   }
-}
+};
 
 export default DB;

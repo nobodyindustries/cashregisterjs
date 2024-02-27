@@ -11,7 +11,7 @@ const PriceDropCoffee = {
     return coffeeProducts.map((item) => item[1]).reduce((total, current) => total + current);
   },
   applies: (basket) => {
-    return PriceDropCoffee.amountCount(basket) >= 3
+    return PriceDropCoffee.amountCount(basket) >= 3;
   },
   getAmountInCents: (basket, products) => {
     if (!PriceDropCoffee.applies(basket)) return 0;
@@ -25,6 +25,6 @@ const PriceDropCoffee = {
     }).reduce((total, current) => total + current);
     return -Math.round(discount);
   }
-}
+};
 
 export default PriceDropCoffee;

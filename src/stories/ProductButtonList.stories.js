@@ -16,10 +16,10 @@ export default {
       initialState: (action) => alert(`Action executed\nAction: ${JSON.stringify(action)}`)
     }),
   ],
-}
+};
 
 export const Primary = {
   render: () => {
-    return (<ProductButtonList/>)
+    return (<ProductButtonList/>);
   },
 };

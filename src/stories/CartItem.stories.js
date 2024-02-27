@@ -6,7 +6,7 @@ import {BasketDataContext, BasketDispatchContext} from "@/components/BasketProvi
 
 export default {
   component: CartItem
-}
+};
 
 export const Primary = {
   render: () => <CartItem productPrice={1123} productName="Coffee" productQuantity={2} productId="CF1"/>,

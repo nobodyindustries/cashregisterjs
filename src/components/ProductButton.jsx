@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 const ProductButton = ({productId, name, formattedPrice, onClick}) => {
   return (
@@ -12,7 +12,7 @@ const ProductButton = ({productId, name, formattedPrice, onClick}) => {
         {formattedPrice}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ProductButton;

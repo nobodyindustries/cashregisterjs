@@ -16,11 +16,11 @@ const InvoiceTotal = () => {
       && basket
       && basket?.items
       && Object.keys(basket.items).length > 0;
-  }
+  };
 
   const applyRules = () => {
     return rules && rules.length > 0;
-  }
+  };
 
   const getInvoiceTotal = () => {
     if (!showTotal()) return null;
@@ -36,7 +36,7 @@ const InvoiceTotal = () => {
     }
     
     return Currency.formatCents(totalBeforeDiscounts + totalDiscounts);
-  }
+  };
 
   return showTotal() && (
     <div className="mb-4 p-4 border-2 border-black flex flex-wrap">
@@ -47,7 +47,7 @@ const InvoiceTotal = () => {
         {getInvoiceTotal()}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default InvoiceTotal;

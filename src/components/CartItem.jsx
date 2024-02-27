@@ -9,13 +9,13 @@ const CartItem = ({productId, productName, productQuantity, productPrice}) => {
     evt.preventDefault();
     if (!productId || !basketDispatch) return;
     basketDispatch({type: ItemReducerActionTypes.ITEM_INCREASE, itemId: productId});
-  }
+  };
 
   const onDecreaseProduct = (evt) => {
     evt.preventDefault();
     if (!productId || !basketDispatch) return;
     basketDispatch({type: ItemReducerActionTypes.ITEM_DECREASE, itemId: productId});
-  }
+  };
 
   return (
     <div className="w-full flex place-items-center text-lg">
@@ -42,6 +42,6 @@ const CartItem = ({productId, productName, productQuantity, productPrice}) => {
       </div>
     </div>
   );
-}
+};
 
 export default CartItem;

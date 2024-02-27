@@ -10,7 +10,7 @@ const DiscountItem = ({description, amount}) => {
         {currency.formatCents(amount)}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default DiscountItem;

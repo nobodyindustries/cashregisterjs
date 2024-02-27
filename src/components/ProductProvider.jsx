@@ -7,7 +7,7 @@ export const ProductDataContext = createContext({});
 
 export const useProducts = () => {
   return useContext(ProductDataContext);
-}
+};
 
 const ProductProvider = ({children}) => {
 
@@ -20,14 +20,14 @@ const ProductProvider = ({children}) => {
     }
     const data = await res.json();
     return data["products"];
-  }
+  };
 
   useEffect(() => {
 
     const getProductsEffect = async () => {
       const productData = await getProductContextInitialValue();
       setProducts(productData);
-    }
+    };
 
     void getProductsEffect();
 
@@ -37,7 +37,7 @@ const ProductProvider = ({children}) => {
     <ProductDataContext.Provider value={products}>
       {children}
     </ProductDataContext.Provider>
-  )
-}
+  );
+};
 
 export default ProductProvider;

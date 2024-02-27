@@ -7,7 +7,7 @@ import {RuleDataContext} from "@/components/RuleProvider";
 
 export default {
   component: DiscountList
-}
+};
 
 export const Primary = {
   render: () => <DiscountList/>,

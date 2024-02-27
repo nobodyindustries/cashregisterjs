@@ -18,7 +18,7 @@ const ProductButtonList = () => {
       type: ItemReducerActionTypes.ITEM_INCREASE,
       itemId: productId
     });
-  }
+  };
 
   return (
     <div className="mb-4 p-4 border-2 border-black flex flex-wrap">
@@ -34,11 +34,11 @@ const ProductButtonList = () => {
                              formattedPrice={Currency.formatCents(product.price)}
                              onClick={onProductAdd}/>
             </div>
-          )
+          );
         })}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ProductButtonList;

@@ -10,7 +10,7 @@ export default {
       control: "number"
     },
   }
-}
+};
 
 export const Primary = {
   render: ({description, amount}) => <DiscountItem description={description} amount={amount}/>,

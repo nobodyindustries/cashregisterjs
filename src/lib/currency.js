@@ -5,8 +5,8 @@ const Currency = {
     if (formatted_amount.endsWith(".00")) {
       formatted_amount = formatted_amount.replace(".00", "");
     }
-    return `${formatted_amount}€`
+    return `${formatted_amount}€`;
   }
-}
+};
 
 export default Currency;

@@ -4,6 +4,6 @@ import PriceDropStrawberries from "@/data/rules/PriceDropStrawberries";
 
 const rules = [
   BuyTwoGetOneFreeGreenTea, PriceDropCoffee, PriceDropStrawberries
-]
+];
 
 export default rules;

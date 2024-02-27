@@ -1,5 +1,5 @@
 import DB from "@/lib/db";
 
 export async function GET() {
-  return Response.json({products: DB.getAllProducts()})
+  return Response.json({products: DB.getAllProducts()});
 }

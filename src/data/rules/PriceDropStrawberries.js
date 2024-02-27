@@ -10,7 +10,7 @@ const PriceDropStrawberries = {
     return items["SR1"];
   },
   applies: (basket) => {
-    return PriceDropStrawberries.amountCount(basket) >= 3
+    return PriceDropStrawberries.amountCount(basket) >= 3;
   },
   getAmountInCents: (basket, products) => {
     if (!PriceDropStrawberries.applies(basket)) return 0;
@@ -20,6 +20,6 @@ const PriceDropStrawberries = {
     const unitsInBasket = PriceDropStrawberries.amountCount(basket);
     return -((price - 450) * unitsInBasket);
   }
-}
+};
 
 export default PriceDropStrawberries;

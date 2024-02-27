@@ -42,6 +42,6 @@ const TestMocks = {
 
   MOCK_RULES_DISCOUNT_TESTING: [MockTestRule]
 
-}
+};
 
 export default TestMocks;

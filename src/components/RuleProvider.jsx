@@ -8,7 +8,7 @@ export const RuleDataContext = createContext({});
 
 export const useRules = () => {
   return useContext(RuleDataContext);
-}
+};
 
 const RuleProvider = ({children}) => {
 
@@ -16,7 +16,7 @@ const RuleProvider = ({children}) => {
     <RuleDataContext.Provider value={DB.getAllRules()}>
       {children}
     </RuleDataContext.Provider>
-  )
-}
+  );
+};
 
 export default RuleProvider;
