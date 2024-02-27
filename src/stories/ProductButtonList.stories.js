@@ -3,7 +3,8 @@ import {withReactContext} from "storybook-react-context";
 import {ProductDataContext} from "@/components/ProductProvider";
 
 export default {
-  component: ProductButtonList, decorators: [
+  component: ProductButtonList,
+  decorators: [
     withReactContext({
       Context: ProductDataContext,
       initialState: [
@@ -32,7 +33,7 @@ export default {
   ],
 }
 
-export const Render = {
+export const Primary = {
   render: () => {
     return (<ProductButtonList/>)
   },

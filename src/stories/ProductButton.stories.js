@@ -15,7 +15,7 @@ export default {
   }
 }
 
-export const Render = {
+export const Primary = {
   render: ({productId, name, formattedPrice}) => {
     const onClickMock = (evt) => {
       evt.preventDefault();

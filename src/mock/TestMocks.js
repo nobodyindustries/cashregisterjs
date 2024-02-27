@@ -1,3 +1,5 @@
+import MockTestRule from "@/mock/MockTestRule";
+
 const TestMocks = {
 
   MOCK_PRODUCTS: [
@@ -34,7 +36,11 @@ const TestMocks = {
       name: "Coffee",
       price: 1123
     },
-  ]
+  ],
+
+  MOCK_BASKET: {items: {"CF1": 2}},
+
+  MOCK_RULES_DISCOUNT_TESTING: [MockTestRule]
 
 }
 

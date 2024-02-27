@@ -21,7 +21,7 @@ export const ItemReducerActionTypes = Object.freeze({
   ITEM_DECREASE: 'item-decrease'
 });
 
-const itemsReducer = (state, action) => {
+export const itemsReducer = (state, action) => {
   if (!action?.itemId || !action?.type) return;
   const currentItemId = action.itemId;
   switch (action.type) {

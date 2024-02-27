@@ -4,6 +4,6 @@ export default {
   component: Logo
 }
 
-export const Render = {
-  render: () => <Logo />,
+export const Primary = {
+  render: () => <Logo/>,
 };
