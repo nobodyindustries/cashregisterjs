@@ -6,6 +6,7 @@
 - TailwindCSS
 - Qodana
 - Vitest
+- Storybook
 - ESLint
 
 ## Installation
@@ -21,6 +22,10 @@ Install dependencies
 Run tests (optional)
 
 `npm run test`
+
+Check out the Storybook (optional)
+
+`npm run storybook`
 
 Start the application
 
