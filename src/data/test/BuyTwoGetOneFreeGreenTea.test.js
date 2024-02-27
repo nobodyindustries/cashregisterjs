@@ -40,7 +40,7 @@ describe("data/rules/BuyTwoGetOneFreeGreenTeat", () => {
           "GR2": 3,
           "GR1": 1
         }
-      }), TestMocks.MOCK_PRODUCTS).toEqual(0);
+      }), TestMocks.MOCK_PRODUCTS_RULES).toEqual(0);
     })
     it("Should throw an error if the price can not be found but the rule applies", () => {
       const products = structuredClone(TestMocks.MOCK_PRODUCTS_RULES).map((product) => {

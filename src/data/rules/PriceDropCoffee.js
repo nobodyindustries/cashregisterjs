@@ -18,11 +18,12 @@ const PriceDropCoffee = {
     const items = basket?.items;
     if (!items) return 0;
     const coffeeItems = Object.entries(items).filter((item) => item[0].startsWith("CF"));
-    return -coffeeItems.map((item) => {
+    const discount = coffeeItems.map((item) => {
       const price = ProductUtils.getPriceFromId(products, item[0]);
-      if (price === null) throw new Error(`Misconfigured product ${item[0]}`);
-      return price / 3 * PriceDropCoffee.amountCount(basket);
-    }).reduce((total, current) => total + current)
+      if (price === null) throw new Error(`Misconfigured product: ${item[0]}`);
+      return price / 3 * item[1];
+    }).reduce((total, current) => total + current);
+    return -Math.round(discount);
   }
 }
 
