@@ -8,22 +8,20 @@ const DiscountList = () => {
   const basket = useBasket();
   const products = useProducts();
 
-  return (
+  return rules.filter((rule) => rule.applies(basket)).length > 0 && (
     <div className="mb-4 p-4 border-2 border-black flex flex-wrap">
+      <div className="w-full">
+        <h1>Discounts</h1>
+      </div>
       {
-        rules.filter((rule) => rule.applies(basket)).length > 0 ?
-          (
-            rules.filter((rule) => rule.applies(basket)).map((rule, idx) =>
-              (
-                <DiscountItem key={`discount-item-${idx}`} description={rule.description}
-                              amount={rule.getAmountInCents(basket, products)}/>
-              )
+        (
+          rules.filter((rule) => rule.applies(basket)).map((rule, idx) =>
+            (
+              <DiscountItem key={`discount-item-${idx}`} description={rule.description}
+                            amount={rule.getAmountInCents(basket, products)}/>
             )
-          ) : (
-            <div className="w-full text-xl">
-              <p>No discounts yet. Add more products...</p>
-            </div>
           )
+        )
       }
     </div>
   )

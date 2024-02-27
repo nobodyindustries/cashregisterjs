@@ -21,17 +21,22 @@ const ProductButtonList = () => {
   }
 
   return (
-    <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-2">
-      {productData && productData.map((product) => {
-        return (
-          <div key={`product-${product.code}`}>
-            <ProductButton productId={product.code}
-                           name={product.name}
-                           formattedPrice={Currency.formatCents(product.price)}
-                           onClick={onProductAdd}/>
-          </div>
-        )
-      })}
+    <div className="mb-4 p-4 border-2 border-black flex flex-wrap">
+      <div className="w-full">
+        <h1>Add products</h1>
+      </div>
+      <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-2">
+        {productData && productData.map((product) => {
+          return (
+            <div key={`product-${product.code}`}>
+              <ProductButton productId={product.code}
+                             name={product.name}
+                             formattedPrice={Currency.formatCents(product.price)}
+                             onClick={onProductAdd}/>
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }

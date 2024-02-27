@@ -6,6 +6,7 @@ import Cart from "@/components/Cart";
 import BasketProvider from "@/components/BasketProvider";
 import RuleProvider from "@/components/RuleProvider";
 import DiscountList from "@/components/DiscountList";
+import InvoiceTotal from "@/components/InvoiceTotal";
 
 export default function Home() {
 
@@ -14,11 +15,9 @@ export default function Home() {
       <BasketProvider>
         <RuleProvider>
           <main>
-            <h1>Cart</h1>
             <Cart/>
-            <h1>Discounts</h1>
             <DiscountList/>
-            <h1>Add products</h1>
+            <InvoiceTotal/>
             <ProductButtonList/>
           </main>
         </RuleProvider>
