@@ -18,7 +18,7 @@ const CartItem = ({productId, productName, productQuantity, productPrice}) => {
   }
 
   return (
-    <div className="w-full flex place-items-center text-xl">
+    <div className="w-full flex place-items-center text-lg">
       <div className="flex-grow overflow-hidden">
         <span className="font-bold">{productName}</span>
         <span className="pl-2">x{productQuantity}</span>

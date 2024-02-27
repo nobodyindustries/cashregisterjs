@@ -7,6 +7,5 @@ h1 {
     @apply w-full;
     @apply pb-4;
     @apply font-bold;
-    @apply text-lg;
-    @apply md:text-xl;
+    @apply text-xl;
 }
