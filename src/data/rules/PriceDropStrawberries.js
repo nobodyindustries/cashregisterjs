@@ -1,6 +1,9 @@
+import ProductUtils from "@/lib/productUtils";
+
 const PriceDropStrawberries = {
   description: "Strawberry volume discount (COO Offer)",
   amountCount: (basket) => {
+    if (!basket) return 0;
     const items = basket?.items;
     if (!items) return 0;
     if (!Object.keys(items).includes("SR1")) return 0;
@@ -11,12 +14,11 @@ const PriceDropStrawberries = {
   },
   getAmountInCents: (basket, products) => {
     if (!PriceDropStrawberries.applies(basket)) return 0;
-    const product = products.find((product) => product.code === "SR1");
-    if (!product) return 0;
-    if (product?.price === undefined) throw new Error("Misconfigured product: SR1");
-    if (product.price <= 450) return 0;
+    const price = ProductUtils.getPriceFromId(products, "SR1");
+    if (price === null) throw new Error("Misconfigured product: SR1");
+    if (price <= 450) return 0;
     const unitsInBasket = PriceDropStrawberries.amountCount(basket);
-    return -((product.price - 450) * unitsInBasket);
+    return -((price - 450) * unitsInBasket);
   }
 }
 
